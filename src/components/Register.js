@@ -1,12 +1,12 @@
-import "./App.css";
+import "../assets/css/Register.css";
 import React, { useState } from "react";
-import bcrypt, { genSaltSync } from "bcryptjs";
+import bcrypt, { genSaltSync } from "bcryptjs-react";
 
-function App() {
+function Register() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  const salt = bcrypt.genSaltSync(12);
+  const salt = genSaltSync(12);
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -57,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default Register;
