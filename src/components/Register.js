@@ -12,6 +12,7 @@ function Register() {
     e.preventDefault();
     try {
       let encryptedPassword = bcrypt.hashSync(password, salt);
+      
       let response = await fetch("http://localhost:3000/api/users/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -48,9 +49,7 @@ function Register() {
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-
         <button type="submit">Create</button>
-
         <div className="message">{message ? <p>{message}</p> : null}</div>
       </form>
     </div>

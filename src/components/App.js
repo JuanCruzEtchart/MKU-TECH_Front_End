@@ -14,15 +14,27 @@ function App() {
       <Header />
       <div className="app__routes-container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/register2" element={<Register2 />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="*" element={<NotFound />} />
+          <Route clasName="app__routes-element" path="/" element={<Home />} />
+          <Route
+            clasName="app__routes-element"
+            path="/register"
+            element={<Register />}
+          />
+          <Route
+            clasName="app__routes-element"
+            path="/register2"
+            element={<Register2 />}
+          />
+          <Route clasName="app__routes-element" path="/map" element={<Map />} />
+          <Route
+            clasName="app__routes-element"
+            path="*"
+            element={<NotFound />}
+          />
         </Routes>
       </div>
     </React.Fragment>
-  );
+  ); 
 }
 
 export default App;
