@@ -67,16 +67,16 @@ export default function Map() {
     return () => clearInterval(interval);
   }, []);
 
-  fleet.forEach((data) => {
+/*   fleet.forEach((data) => {
     let vehicleData = {
       latitude: data.latitude,
       longitude: data.longitude,
       plate: data.vehicle_plate,
       vehicle: data.vehicle,
       doorStatus: data.doorStatus,
-      /*  doorCounter: data.doorCounter, */
+        doorCounter: data.doorCounter, 
     };
-  });
+  }); */
 
   /*   let vehicleData = {
     latitude: latitude,
@@ -87,7 +87,8 @@ export default function Map() {
     doorCounter: doorCounter,
   }; */
 
-  let vehicleProps = [vehicleData];
+  //let vehicleProps = [vehicleData];
+  let vehicleProps = [fleet];
 
   return (
     <div className="map">
