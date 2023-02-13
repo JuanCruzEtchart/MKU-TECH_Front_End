@@ -3,7 +3,7 @@
 </p>
 
 > Aplicación web para captura y muestra de datos de telemetría, para la monitorización y análisis de información relevante al medio aplicado. 
-Este front end se encarga de mostrar los datos de los sensores a través de REST API, enviados por el [back End](https://github.com/JuanCruzEtchart/MKU_Back_End).
+Este front end creado en React, se encarga de mostrar los datos de los sensores enviados por el [back End](https://github.com/JuanCruzEtchart/MKU_Back_End) a través de REST API. Actualmente la principal funcionalidad del proyecto es mostrar la ubicación GPS de camionetas de reparto, utilizando la API de Google Maps.
 
 ### 🏠 [Homepage](https://www.mkutech.com)
 ### 📷 [Instagram](https://www.instagram.com/mku.tech/)
