@@ -1,6 +1,8 @@
-.map {
-display: flex;
-align-items: flex-start;
+.map-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .map__description {
@@ -18,6 +20,15 @@ align-items: flex-start;
   align-items: center;
 }
 
+.vehicle-info {
+  margin-bottom: 30px;
+}
+
 #id {
   height: 60%;
+}
+
+.map-container {
+  width: 500px;
+  height: 500px;
 }

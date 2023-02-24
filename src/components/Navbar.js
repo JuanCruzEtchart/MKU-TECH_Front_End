@@ -21,13 +21,13 @@ function Header() {
         <li className="navbar__li">
           <Link className="navbar__link" to="/map">
             {/* <i className="fas fa-fw fa-tachometer-alt"></i> */}
-            <span>Mapa</span>
+            <span>Datos de vehículo</span>
           </Link>
         </li>
         <li className="navbar__li">
           <Link className="navbar__link" to="/mapcopy">
             {/* <i className="fas fa-fw fa-tachometer-alt"></i> */}
-            <span>Mapa copy</span>
+            <span>Datos de flota</span>
           </Link>
         </li>
       </ul>

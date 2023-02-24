@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Navbar";
 import Register from "./Register";
 import Register2 from "./Register copy";
-import Map from "./Map";
+import VehicleMenu from "./Vehicle Menu";
 import MapCopy from "./Map copy";
 import Home from "./Home";
 import NotFound from "./NotFound";
@@ -26,7 +26,7 @@ function App() {
             path="/register2"
             element={<Register2 />}
           />
-          <Route clasName="app__routes-element" path="/map" element={<Map />} />
+          <Route clasName="app__routes-element" path="/map" element={<VehicleMenu />} />
           <Route clasName="app__routes-element" path="/mapcopy" element={<MapCopy />} />
           <Route
             clasName="app__routes-element"

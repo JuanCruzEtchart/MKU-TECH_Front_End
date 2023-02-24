@@ -1,89 +1,31 @@
-import React, { useState, useEffect } from "react";
-import "../assets/css/Map.css";
-import Vehicle from "./Vehicle";
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-export default function Map() {
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
-  const [plate, setPlate] = useState("");
-  const [vehicle, setVehicle] = useState("");
-  const [doorStatus, setDoorStatus] = useState("");
-  const [doorCounter, setDoorCounter] = useState(-1);
-  const vehicleURL = "http://localhost:3000/api/fleets/vehicle/4";
-  const doorStatusURL = "http://localhost:3000/api/fleets/vehicle/4/doorstatus";
+export default function Home() {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
 
-  useEffect(() => {
-    const getVehicle = async () => {
-      const data = await fetch(vehicleURL);
-      data.json().then((json) => {
-        setLatitude(json.data.latitude);
-        setLongitude(json.data.longitude);
-        setPlate(json.data.vehicle_plate);
-        setVehicle(json.data.id);
-      });
-    };
-    getVehicle();
-  }, []);
+  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
 
-  useEffect(() => {
-    const getDoorStatus = async () => {
-      const data = await fetch(doorStatusURL);
-      data.json().then((json) => {
-        if (json.data === 1) {
-          setDoorStatus("Abierta");
-          setDoorCounter((doorCounter) => doorCounter + 1);
-        } else {
-          setDoorStatus("Cerrada");
-          setDoorCounter((doorCounter) => (doorCounter = 0));
-        }
-      });
-    };
-    getDoorStatus();
-    const interval = setInterval(() => {
-      return getDoorStatus();
-    }, 60000);
-    return () => clearInterval(interval);
-  }, []);
-
-  let vehicleData = {
-    latitude: latitude,
-    longitude: longitude,
-    plate: plate,
-    vehicle: vehicle,
-    doorStatus: doorStatus,
-    doorCounter: doorCounter,
-  };
-
-  let vehicleProps = [vehicleData];
+  if (loadError) return <div>Error loading maps</div>;
+  if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <div className="map">
-      {vehicleProps.map((data, i) => {
-        return <Vehicle {...data} key={i} />;
-      })}
-      {/*       <div className="map__description">
-        {vehicle.length === 0 && <h1>Cargando...</h1>}
-        {vehicle.length !== 0 && <h1>Vehículo: {vehicle}</h1>}
-        {doorStatus.length === 0 && <h1>Cargando...</h1>}
-        {doorStatus.length !== 0 && <h1>Status de la puerta: {doorStatus}</h1>}
-        {doorStatus.length === 0 && <h1>Cargando...</h1>}
-        {doorStatus.length !== 0 && (
-          <h1>Tiempo con la puerta abierta: {doorCounter}min</h1>
-        )}
-        <div>
-          {latitude.length === 0 && <h2>Latitud: Cargando...</h2>}
-          {latitude.length !== 0 && <h2>Latitud: {latitude}</h2>}
-        </div>
-        <div>
-          {longitude.length === 0 && <h2>Longitud: Cargando...</h2>}
-          {longitude.length !== 0 && <h2>Longitud: {longitude}</h2>}
-        </div>
-        <div>
-          {plate.length === 0 && <h2>Patente: Cargando...</h2>}
-          {plate.length !== 0 && <h2>Patente: {plate}</h2>}
-        </div>
-      </div>
-      <div id="map"></div> */}
+    <div>
+      <Map center={center} />
     </div>
+  );
+}
+
+function Map({ center }) {
+  return (
+    <GoogleMap
+      zoom={10}
+      center={center}
+      mapContainerClassName="map-container"
+    >
+      <Marker position={center} />
+    </GoogleMap>
   );
 }
