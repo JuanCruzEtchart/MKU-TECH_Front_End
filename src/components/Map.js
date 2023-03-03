@@ -3,7 +3,7 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 export default function Home() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
 
   const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
@@ -24,6 +24,7 @@ function Map({ center }) {
       zoom={10}
       center={center}
       mapContainerClassName="map-container"
+      className="map"
     >
       <Marker position={center} />
     </GoogleMap>

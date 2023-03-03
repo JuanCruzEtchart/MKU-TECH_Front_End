@@ -16,7 +16,7 @@ export default function VehicleMenu() {
   /*   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_PUBLIC_GOOGLE_MAPS_API_KEY,
   }); */
-
+  console.log(localStorage.getItem("userId"));
   useEffect(() => {
     const getVehicle = async () => {
       const data = await fetch(vehicleURL);

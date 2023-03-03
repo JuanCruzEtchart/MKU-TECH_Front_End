@@ -12,8 +12,7 @@ function Register() {
     e.preventDefault();
     try {
       let encryptedPassword = bcrypt.hashSync(password, salt);
-      
-      let response = await fetch("http://localhost:3000/api/users/create", {
+      let response = await fetch("http://localhost:3100/api/users/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

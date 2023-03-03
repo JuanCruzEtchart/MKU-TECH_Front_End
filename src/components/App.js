@@ -3,6 +3,7 @@ import Header from "./Navbar";
 import Register from "./Register";
 import Register2 from "./Register copy";
 import VehicleMenu from "./Vehicle Menu";
+import Login from "./Login";
 import MapCopy from "./Map copy";
 import Home from "./Home";
 import NotFound from "./NotFound";
@@ -23,11 +24,19 @@ function App() {
           />
           <Route
             clasName="app__routes-element"
-            path="/register2"
-            element={<Register2 />}
+            path="/login"
+            element={<Login />}
           />
-          <Route clasName="app__routes-element" path="/map" element={<VehicleMenu />} />
-          <Route clasName="app__routes-element" path="/mapcopy" element={<MapCopy />} />
+          <Route
+            clasName="app__routes-element"
+            path="/map"
+            element={<VehicleMenu />}
+          />
+          <Route
+            clasName="app__routes-element"
+            path="/mapcopy"
+            element={<MapCopy />}
+          />
           <Route
             clasName="app__routes-element"
             path="*"
@@ -36,7 +45,7 @@ function App() {
         </Routes>
       </div>
     </React.Fragment>
-  ); 
+  );
 }
 
 export default App;

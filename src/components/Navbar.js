@@ -1,7 +1,7 @@
 import "../assets/css/Navbar.css";
 import React, { useState, useEffect } from "react";
 import icon from "../assets/images/icon.png";
-import { Link/* , Route, Routes  */} from "react-router-dom";
+import { Link /* , Route, Routes  */ } from "react-router-dom";
 
 function Header() {
   return (
@@ -15,7 +15,13 @@ function Header() {
         <li className="navbar__li">
           <Link className="navbar__link" to="/register">
             {/* <i className="fas fa-fw fa-tachometer-alt"></i> */}
-            <span>Crear usuario</span>
+            <span>Register</span>
+          </Link>
+        </li>
+        <li className="navbar__li">
+          <Link className="navbar__link" to="/login">
+            {/* <i className="fas fa-fw fa-tachometer-alt"></i> */}
+            <span>Login</span>
           </Link>
         </li>
         <li className="navbar__li">

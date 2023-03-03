@@ -1,0 +1,15 @@
+Prioridad:
+- Agregar botón para eliminar localstorage (logout con localstorage = null)
+- Utilizar parámetros de localstorage para bloquear funcionalidades de la página para no admins
+- Agregar mensajes de alerta de usuario utilizando useState
+- Estética final de register y login 
+- Agregar vista de edición de usuarios para admins
+- Revisar react tokens y cookies en vez de localstorage
+- Agregar campo de empresa en register
+
+Más adelante:
+- Probar API de Maps para dibujar rutas con varias coordenadas
+- Terminar estética de vista de flotas y de vehiculos
+- Preparar aplicación para utilización de varios sensores
+- Guardar datos de rutas en localstorage 
+
