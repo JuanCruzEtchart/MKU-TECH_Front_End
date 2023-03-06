@@ -30,11 +30,13 @@ function Register() {
     }
   }; */
 
+  console.log(window.localStorage.getItem("user"));
+
   useEffect(() => {
     const getUser = async () => {
       try {
         const data = await loginService.login(name);
-        if (bcrypt.compareSync(password, data.password)) {
+        if (password && compareSync(password, data.password)) {
           console.log(`Contraseñas coinciden `);
           delete data.password;
           window.localStorage.setItem("user", JSON.stringify(data));
@@ -61,17 +63,10 @@ function Register() {
 
   return (
     <div className="App">
+      <h1>Hola, {/* {window.localStorage.getItem("user")} */}!</h1>
       <form onSubmit={form}>
-        <input
-          type="text"
-          ref={inputName}
-          placeholder="Name"
-        />
-        <input
-          type="text"
-          ref={inputPassword}
-          placeholder="Password"
-        />
+        <input type="text" ref={inputName} placeholder="Name" />
+        <input type="text" ref={inputPassword} placeholder="Password" />
         <button type="submit">Create</button>
         <div className="message">{message ? <p>{message}</p> : null}</div>
       </form>

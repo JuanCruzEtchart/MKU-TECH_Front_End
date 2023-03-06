@@ -16,7 +16,7 @@ export default function VehicleMenu() {
   /*   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_PUBLIC_GOOGLE_MAPS_API_KEY,
   }); */
-  console.log(localStorage.getItem("userId"));
+  /* console.log(localStorage.getItem("userId")); */
   useEffect(() => {
     const getVehicle = async () => {
       const data = await fetch(vehicleURL);
@@ -28,6 +28,10 @@ export default function VehicleMenu() {
       });
     };
     getVehicle();
+    const interval = setInterval(() => {
+      return getVehicle();
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -50,27 +54,33 @@ export default function VehicleMenu() {
     return () => clearInterval(interval);
   }, []);
 
-  let vehicleData = {
-    latitude: latitude,
-    longitude: longitude,
-    plate: plate,
-    vehicle: vehicle,
-    doorStatus: doorStatus,
-    doorCounter: doorCounter,
-  };
+  let vehicleData = [
+    {
+      latitude: latitude,
+      longitude: longitude,
+      plate: plate,
+      vehicle: vehicle,
+      doorStatus: doorStatus,
+      doorCounter: doorCounter,
+    },
+  ];
 
-  let vehicleProps = [vehicleData];
+  /* let vehicleProps = [vehicleData]; */
+  let coordinates = [{ latitude: latitude, longitude: longitude }];
 
   return (
     <div className="map-container">
       <div className="vehicle-info">
-        {vehicleProps.map((data, i) => {
+        {vehicleData.map((data, i) => {
           return <Vehicle {...data} key={i} />;
         })}
       </div>
       {/* {isLoaded.length === 0 && <div>Loading...</div>} */}
       <div className="map">
-        <Map />
+        {coordinates.map((data, i) => {
+          return <Map {...data} key={i} />;
+        })}
+        {/* <Map {...coordinates} /> */}
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Navbar";
 import Register from "./Register";
-import Register2 from "./Register copy";
 import VehicleMenu from "./Vehicle Menu";
 import Login from "./Login";
 import MapCopy from "./Map copy";

@@ -40,8 +40,10 @@
 .App {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-top: 5rem;
 }
+
 input {
   display: block;
   width: 20rem;
