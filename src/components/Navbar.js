@@ -2,11 +2,16 @@ import "../assets/css/Navbar.css";
 import React, { useState, useEffect } from "react";
 import icon from "../assets/images/icon.png";
 import { Link /* , Route, Routes  */ } from "react-router-dom";
+/* import BurgerMenu from "./BurgerMenu"; */
 
 function Header() {
   return (
     <nav className="navbar">
+      {/* <BurgerMenu /> */}
       <ul className="navbar__ul">
+        {/*     <div>
+          <Example />
+        </div> */}
         <div /* className="navbar__li" */>
           <Link to="/">
             <img className="navbar__icon" src={icon} alt="Home" />

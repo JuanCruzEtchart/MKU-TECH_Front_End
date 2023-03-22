@@ -12,7 +12,7 @@ import "../assets/css/App.css";
 function App() {
   return (
     <React.Fragment>
-      <Header />
+      <Header className="app__navbar"/>
       <div className="app__routes-container">
         <Routes>
           <Route clasName="app__routes-element" path="/" element={<Home />} />

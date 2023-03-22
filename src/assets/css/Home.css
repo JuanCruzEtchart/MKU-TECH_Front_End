@@ -1,0 +1,35 @@
+.main__home-container {
+  /*  width: 100vw;
+  height: calc(100vh - 96px); */
+  width: 100vw;
+  height: calc(100vh - 96px);
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 50px 0px;
+}
+
+/* .main__title {
+} */
+
+.main__map {
+  background-color: red;
+  width: 400px;
+  height: 288px;
+  border-radius: 10px;
+}
+
+.main__data-container {
+  background-color: blue;
+  width: 400px;
+  height: 288px;
+}
+
+/* .main__vehicle-number {
+} */
+
+h1 {
+  background-color: red;
+}
