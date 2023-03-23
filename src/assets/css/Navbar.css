@@ -22,6 +22,8 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 50;
 }
 
 .navbar__icon {

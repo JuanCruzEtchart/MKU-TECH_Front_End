@@ -16,20 +16,83 @@
 
 .main__map {
   background-color: red;
+  /* width: 400px;
+  height: 288px; */
   width: 400px;
-  height: 288px;
+  height: 144px;
   border-radius: 10px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
 }
 
 .main__data-container {
-  background-color: blue;
-  width: 400px;
-  height: 288px;
+  background-color: #4d4d4d;
+  /*  width: 400px;
+  height: 288px; */
+  /* width: 400px; */
+  height: auto;
+  border-radius: 10px;
+  border-left: 2px solid red;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  padding-bottom: 12px;
 }
 
-/* .main__vehicle-number {
-} */
+.main__vehicle-number {
+  background-color: #1b1b1b;
+  padding: 17px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
 
-h1 {
-  background-color: red;
+.main__vehicle-sensor-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px black solid;
+  margin: 10px 10px;
+}
+
+.main__vehicle-sensor-container:last-child {
+  margin-bottom: 0px;
+}
+
+.main__sensor {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.main__sensor-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__sensor-data li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.main__sensor-data li:last-child {
+  margin-bottom: 0px;
+}
+
+.main__sensor-type {
+  display: flex;
+  align-items: center;
+}
+
+.main__sensor-status {
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  height: 34px;
+  margin-left: 10px;
 }
