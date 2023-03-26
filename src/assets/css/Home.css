@@ -9,7 +9,7 @@
   align-items: center;
   color: white;
   padding: 50px 0px;
-}
+}/*listo*/
 
 /* .main__title {
 } */
@@ -23,7 +23,7 @@
   border-radius: 10px;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
-}
+}/*listo*/
 
 .main__data-container {
   background-color: #4d4d4d;
@@ -36,7 +36,7 @@
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
   font-size: 16px;
   padding-bottom: 12px;
-}
+}/*listo*/
 
 .main__vehicle-number {
   background-color: #1b1b1b;
@@ -45,7 +45,7 @@
   border-radius: 10px;
   margin-top: 4px;
   margin-left: 4px;
-}
+}/*listo*/
 
 .main__vehicle-sensor-container {
   display: flex;
@@ -55,36 +55,36 @@
   padding: 10px;
   border: 2px black solid;
   margin: 10px 10px;
-}
+}/*listo*/
 
 .main__vehicle-sensor-container:last-child {
   margin-bottom: 0px;
-}
+}/*REVISAR*/
 
 .main__sensor {
   margin-top: 5px;
   margin-bottom: 10px;
-}
+}/*listo*/
 
 .main__sensor-data {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+}/*listo*/
 
 .main__sensor-data li {
   margin-bottom: 10px;
   margin-left: 20px;
-}
+}/*listo*/
 
 .main__sensor-data li:last-child {
   margin-bottom: 0px;
-}
+}/*listo*/
 
 .main__sensor-type {
   display: flex;
   align-items: center;
-}
+}/*listo*/
 
 .main__sensor-status {
   padding: 17px;
