@@ -1,19 +1,22 @@
 /* import "../assets/css/Home.css"; */
 import Map from "../assets/images/Map.png";
+import { Link /* , Route, Routes  */ } from "react-router-dom";
 export default function Home() {
   return (
-    <div className="main__home-container w-screen h-[calc(100vh-96px)] min-h-[calc(100vh-96px)] bg-[#212121] py-[50px] mx-auto flex items-start justify-evenly flex-wrap text-white overflow-x-hidden text-base">
-      <div className="">
+    <div className="main__home-container w-screen h-[calc(100vh-96px)] min-h-[calc(100vh-96px)] bg-[#212121] py-[50px] mx-auto flex gap-3.5 gap-y-12 items-start justify-evenly content-start flex-wrap text-white overflow-x-hidden text-base">
+      <div className="bg-[#272727] shadow-default  rounded-default">
         <div className="main__maps-container relative inline-block">
-          <img
-            className="main__map w-[400px] h-[288px] rounded-default shadow-default mb-4"
-            src={Map}
-          />
+          <Link to="/map">
+            <img
+              className="main__map w-[400px] h-[288px] rounded-default shadow-default mb-4"
+              src={Map}
+            />
+          </Link>
           <div className="absolute top-0 left-0 text-white p-1.5 mt-1 ml-1 rounded-default bg-dark-gray">
             <p>Vehículo 1</p>
           </div>
         </div>
-        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default mb-4 text-base pb-3">
+        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default text-base pb-3">
           <div className="main__vehicle-number bg-dark-gray p-1.5 inline-block rounded-default mt-2 ml-2">
             Vehículo 1
           </div>
@@ -54,7 +57,7 @@ export default function Home() {
         </div>
       </div>
       {/* Fin de primer vehículo */}
-      <div>
+      <div className="bg-[#272727] shadow-default  rounded-default">
         <div className="main__maps-container relative inline-block">
           <img
             className="main__map w-[400px] h-[288px] rounded-default shadow-default mb-4"
@@ -64,7 +67,7 @@ export default function Home() {
             <p>Vehículo 1</p>
           </div>
         </div>
-        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default mb-4 text-base pb-3">
+        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default text-base pb-3">
           <div className="main__vehicle-number bg-dark-gray p-1.5 inline-block rounded-default mt-2 ml-2">
             Vehículo 1
           </div>
@@ -105,7 +108,7 @@ export default function Home() {
         </div>
       </div>
       {/* Fin de segundo vehículo */}
-      <div>
+      <div className="bg-[#272727] shadow-default  rounded-default">
         <div className="main__maps-container relative inline-block">
           <img
             className="main__map w-[400px] h-[288px] rounded-default shadow-default mb-4"
@@ -115,7 +118,7 @@ export default function Home() {
             <p>Vehículo 1</p>
           </div>
         </div>
-        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default mb-4 text-base pb-3">
+        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default text-base pb-3">
           <div className="main__vehicle-number bg-dark-gray p-1.5 inline-block rounded-default mt-2 ml-2">
             Vehículo 1
           </div>
@@ -156,7 +159,7 @@ export default function Home() {
         </div>
       </div>
       {/* Fin de segundo vehículo */}
-      <div>
+      <div className="bg-[#272727] shadow-default  rounded-default">
         <div className="main__maps-container relative inline-block">
           <img
             className="main__map w-[400px] h-[288px] rounded-default shadow-default mb-4"
@@ -166,7 +169,7 @@ export default function Home() {
             <p>Vehículo 1</p>
           </div>
         </div>
-        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default mb-4 text-base pb-3">
+        <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default text-base pb-3">
           <div className="main__vehicle-number bg-dark-gray p-1.5 inline-block rounded-default mt-2 ml-2">
             Vehículo 1
           </div>
