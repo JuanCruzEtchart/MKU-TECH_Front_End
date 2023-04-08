@@ -6,7 +6,7 @@ import { Link /* , Route, Routes  */ } from "react-router-dom";
 
 function Header() {
   return (
-    <nav className="navbar">
+    <nav className="navbar xl:h-[20px]">
       {/* <BurgerMenu /> */}
       <ul className="navbar__ul">
         {/*     <div>
