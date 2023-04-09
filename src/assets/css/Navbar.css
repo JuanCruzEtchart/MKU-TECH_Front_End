@@ -15,6 +15,7 @@ body {
 
 .navbar {
   height: 96px;
+  min-width: calc(100vw - 8px);
   background-color: black;
   color: white;
   display: flex;
@@ -23,7 +24,7 @@ body {
   gap: 2rem;
   padding: 0.5rem 1rem;
   position: relative;
-  z-index: 50;
+  /* z-index: 50; */
 }
 
 .navbar__icon {
