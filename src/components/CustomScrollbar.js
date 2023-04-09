@@ -7,7 +7,7 @@ export default function CustomScrollbar({ children }) {
         <div
           {...props}
           className="bg-gray-300 dark:bg-gray-700 rounded-lg"
-          style={{ ...style, width: "8px", background: "rgba(255, 0, 0, 0.7)" }}
+          style={{ ...style, width: "8px", background: "rgba(255, 0, 0, 0.3)" }}
         />
       )}
       autoHide

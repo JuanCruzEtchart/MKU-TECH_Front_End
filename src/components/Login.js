@@ -1,4 +1,4 @@
-import "../assets/css/Register.css";
+/* import "../assets/css/Register.css"; */
 import React, { useState, useEffect, useRef } from "react";
 import bcrypt, { genSaltSync, compareSync } from "bcryptjs-react";
 import loginService from "../services/loginService";

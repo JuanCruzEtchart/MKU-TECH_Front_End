@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       colors: {
         red: "#ff0000",
-        "dark-gray": "#1b1b1b",
+        darkGray: "#1b1b1b",
       },
       borderRadius: {
         default: "0.625rem",

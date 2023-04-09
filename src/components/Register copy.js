@@ -1,4 +1,4 @@
-import "../assets/css/Register copy.css";
+/* import "../assets/css/Register copy.css"; */
 import React, { useState } from "react";
 import bcrypt, { genSaltSync } from "bcryptjs-react";
 
