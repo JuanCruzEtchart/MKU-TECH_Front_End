@@ -42,7 +42,7 @@ export default function Register() {
         <input
           type="text"
           value={name}
-          placeholder="Nombre del usuario"
+          placeholder="Nombre de usuario"
           onChange={(e) => setName(e.target.value)}
           className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
         />

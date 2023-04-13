@@ -62,12 +62,25 @@ function Register() {
   };
 
   return (
-    <div className="App">
-      <h1>Hola, {/* {window.localStorage.getItem("user")} */}!</h1>
-      <form onSubmit={form}>
-        <input type="text" ref={inputName} placeholder="Name" />
-        <input type="text" ref={inputPassword} placeholder="Password" />
-        <button type="submit">Create</button>
+    <div className="register min-w-[calc(100vw-8px)] min-h-[calc(100vh-80px)] bg-[#212121] flex justify-center items-center">
+      <form
+        onSubmit={form}
+        className="max-w-[400px] w-[80%] bg-[#272727] p-5 shadow-default rounded-default flex flex-col justify-center items-center text-white"
+      >
+        <h1 className="mb-12 text-2xl border-b-2 border-red">Iniciar sesión</h1>
+        <input
+          type="text"
+          ref={inputName}
+          placeholder="Nombre de usuario"
+          className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
+        />
+        <input
+          type="text"
+          ref={inputPassword}
+          placeholder="Contraseña"
+          className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
+        />
+        <button type="submit" className="bg-red w-24 p-4 text-black font-bold">Ingresar</button>
         <div className="message">{message ? <p>{message}</p> : null}</div>
       </form>
     </div>
