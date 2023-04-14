@@ -72,15 +72,33 @@ function Register() {
           type="text"
           ref={inputName}
           placeholder="Nombre de usuario"
-          className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
+          className="w-[100%] h-9 bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)] text-base"
         />
         <input
           type="text"
           ref={inputPassword}
           placeholder="Contraseña"
-          className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
+          className="w-[100%] h-9 bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)] text-base"
         />
-        <button type="submit" className="bg-red w-24 p-4 text-black font-bold">Ingresar</button>
+        <div className="flex items-center justify-center w-full mb-5 text-base">
+          <div className="flex items-center">
+            <input
+              type="checkbox"
+              name="remember"
+              id="remember"
+              className="w-full mb-0 mr-3 accent-[red]"
+            />
+            <label for="remember" className="w-auto">
+              Recordame
+            </label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          className="bg-red w-24 p-4 text-black font-bold rounded-default"
+        >
+          Ingresar
+        </button>
         <div className="message">{message ? <p>{message}</p> : null}</div>
       </form>
     </div>

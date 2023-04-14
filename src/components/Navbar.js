@@ -56,6 +56,15 @@ function Header() {
             <span>Datos de flota</span>
           </Link>
         </li>
+        <li className="navbar__li">
+          <Link
+            className="navbar__link w-[6.25rem] text-center p-[0.813rem] rounded-[0.313rem] border-none no-underline transition-all duration-[120ms] hover:text-red"
+            to="/mapcopy"
+          >
+            {/* <i className="fas fa-fw fa-tachometer-alt"></i> */}
+            <span>Detalle de vehículo</span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

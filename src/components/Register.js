@@ -44,16 +44,16 @@ export default function Register() {
           value={name}
           placeholder="Nombre de usuario"
           onChange={(e) => setName(e.target.value)}
-          className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
+          className="w-[100%] h-9 bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)] text-base"
         />
         <input
           type="text"
           value={password}
           placeholder="Contraseña"
           onChange={(e) => setPassword(e.target.value)}
-          className="w-[100%] bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)]"
+          className="w-[100%] h-9 bg-darkGray rounded-default text-white placeholder-[rgba(255,255,255,0.5)] text-base"
         />
-        <button type="submit" className="bg-red w-24 p-4 text-black font-bold">
+        <button type="submit" className="bg-red w-24 p-4 text-black font-bold rounded-default">
           Crear
         </button>
         <div className="message">{message ? <p>{message}</p> : null}</div>

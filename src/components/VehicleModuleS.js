@@ -15,7 +15,7 @@ export default function VehicleModuleS() {
         </div>
       </div>
       <div className="main__data-container bg-[#4d4d4d] rounded-default border-l-2 border-l-red shadow-default pb-3">
-        <div className="main__vehicle-number bg-dark-gray p-1.5 inline-block rounded-default mt-2 ml-2">
+        <div className="main__vehicle-number bg-darkGray p-1.5 inline-block rounded-default mt-2 ml-2">
           Vehículo 1
         </div>
         <div className="main__vehicle-sensor-container flex flex-col bg-[rgba(217,217,217,0.1)] rounded-default p-2.5 border-2 border-black m-2.5 mb-0">
@@ -23,13 +23,13 @@ export default function VehicleModuleS() {
           <ul className="main__sensor-data flex flex-col justify-between space-y-2">
             <li className="main__sensor-type flex items-center">
               Estado de la puerta:
-              <div className="main__sensor-status p-1 px-2 ml-2 bg-dark-gray rounded-default">
+              <div className="main__sensor-status p-1 px-2 ml-2 bg-darkGray rounded-default">
                 abierta
               </div>
             </li>
             <li className="main__sensor-type flex items-center">
               <div className="">Tiempo máximo de la puerta abierta:</div>
-              <div className="main__sensor-status p-1 px-2 ml-2 bg-dark-gray rounded-default">
+              <div className="main__sensor-status p-1 px-2 ml-2 bg-darkGray rounded-default">
                 55 min
               </div>
             </li>
@@ -40,13 +40,13 @@ export default function VehicleModuleS() {
           <ul className="main__sensor-data data flex flex-col justify-between space-y-2">
             <li className="main__sensor-type flex items-center">
               Velocidad actual:
-              <div className="main__sensor-status p-1 px-2 ml-2 bg-dark-gray rounded-default">
+              <div className="main__sensor-status p-1 px-2 ml-2 bg-darkGray rounded-default">
                 30km/h
               </div>
             </li>
             <li className="main__sensor-type flex items-center">
               Velocidad máxima:
-              <div className="main__sensor-status p-1 px-2 ml-2 bg-dark-gray rounded-default">
+              <div className="main__sensor-status p-1 px-2 ml-2 bg-darkGray rounded-default">
                 80km/h
               </div>
             </li>
